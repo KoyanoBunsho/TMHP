@@ -53,6 +53,7 @@ You can reproduce the experimental results by the following commands.
 - unzip the coordinate files
 ```bash
 unzip coord_csv.zip
+unzip pdb_data.zip
 ```
 - execute the speed comparison experiment
 ```bash
@@ -73,6 +74,7 @@ g++ execute_tmhp.cpp -o execute_tmhp -std=c++14 -Wall -Wextra -O3 -mtune=native 
 To evaluate the experimental result, you need to run the following commands outside the docker container.
 ```bash
 poetry install
+poetry run python extract_ok_data.py
 poetry run python eval_result.py
 ```
 
